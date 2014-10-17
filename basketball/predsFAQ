@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+Twitter: <a href="https://twitter.com/VJL_bball">
+VJL_bball</a>
+</p>
+
+<h1>Projection Model FAQ</h1>
+
+<p>
+<b>EWP:</b> "Expected Wins Peak" is a linear regression model used to project how well a player will perform at the peak of his NBA career.  NCAA and international prospects are projected using two similar but distinct models.  The NCAA model uses age, experience, MPG, SOS, Height, Weight, and basic per-possession box-score statistics fit from all players to play in both the NCAA and NBA since 1990.  I have outlined the international model in detail in an article series (<a href="http://nyloncalculus.com/2014/08/13/projecting-international-prospects/">
+here</a>, <a href="http://nyloncalculus.com/2014/08/15/projecting-international-prospects-part-2/">
+here</a>, and <a href="http://nyloncalculus.com/2014/08/21/projecting-international-prospects-part-3/">
+here</a>).     
+</p>
+<p>
+The values inthe "EWP" column give the number of "wins" each player is projected to be worth at his peak.  Wins are defined by a combined two-year average of Win Shares and RAPM-wins. 
+</p>
+
+<p>
+<b>HUM:</b> The "Humble" model has the same ultimate goal as the EWP model, project a player's win peak.  However, it differs in two significant ways.  1) The Humble model uses a randomForest machine-learning process to fit the value of each variable instead of classic linear regression. 2) The Humble model includes a transformed variable that captures concensus scouting opinion of each player using actual draft order and popular draft big-boards.  The Humble model is currently only calculated for NCAA prospects.
+</p>
+<p>
+The values in the "HUM" column should be interperted in the same way as the EWP column.
+</p>
+
+
+<p>
+<b>CMB:</b> CMB is simply a combination of each player's EWP and HUM scores converted to their percentile rnaking among all historical prospects.
+</p>
+
+
+<p>
+<b>BUST, BNCH, STRT, STAR:</b> These columns list the outputs of a multinomial regression used to project the likelihood that a player will ultimately reach each tier of NBA performance:
+
+`Bust':  Never worth more than 2.5 wins in a season.
+`Bench warmer':  Peak value between 2.5 and 5 wins.
+`Starter':  Peak value between 5 and 7.5 wins.
+`Stud':  Peak value between 7.5 and 10 wins.
+`Star':  Ultimately worth more than 10 wins in a season.
+
+This model uses a player's combined CMB score from the previous metrics, but also includes no-step veritcal, and wingspan / height as additional variables.  
+</p>
+
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54782375-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  
+</script>
+  
+</html>
