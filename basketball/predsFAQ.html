@@ -10,7 +10,10 @@ VJL_bball</a>
 <h1>Projection Model FAQ</h1>
 
 <p>
-<b>EWP:</b> "Expected Wins Peak" is a linear regression model used to project how well a player will perform at the peak of his NBA career.  NCAA and international prospects are projected using two similar but distinct models.  The NCAA model uses age, experience, MPG, SOS, Height, Weight, and basic per-possession box-score statistics fit from all players to play in both the NCAA and NBA since 1990.  I have outlined the international model in detail in an article series (<a href="http://nyloncalculus.com/2014/08/13/projecting-international-prospects/">
+<b>EWP:</b> 
+</p>
+<p>
+"Expected Wins Peak" is a linear regression model used to project how well a player will perform at the peak of his NBA career.  NCAA and international prospects are projected using two similar but distinct models.  The NCAA model uses age, experience, MPG, SOS, Height, Weight, and basic per-possession box-score statistics fit from all players to play in both the NCAA and NBA since 1990.  I have outlined the international model in detail in an article series (<a href="http://nyloncalculus.com/2014/08/13/projecting-international-prospects/">
 here</a>, <a href="http://nyloncalculus.com/2014/08/15/projecting-international-prospects-part-2/">
 here</a>, and <a href="http://nyloncalculus.com/2014/08/21/projecting-international-prospects-part-3/">
 here</a>).     
@@ -20,7 +23,10 @@ The values in the "EWP" column give the number of "wins" each player is projecte
 </p>
 
 <p>
-<b>HUM:</b> The "Humble" model has the same ultimate goal as the EWP model, project a player's win peak.  However, it differs in two significant ways.  1) The Humble model uses a randomForest machine-learning process to fit the value of each variable instead of classic linear regression. 2) The Humble model includes a transformed variable that captures concensus scouting opinion of each player using actual draft order and popular draft big-boards.  The Humble model is currently only calculated for NCAA prospects.
+<b>HUM:</b> 
+</p>
+<p>
+The "Humble" model has the same ultimate goal as the EWP model, project a player's win peak.  However, it differs in two significant ways.  1) The Humble model uses a randomForest machine-learning process to fit the value of each variable instead of classic linear regression. 2) The Humble model includes a transformed variable that captures concensus scouting opinion of each player using actual draft order and popular draft big-boards.  The Humble model is currently only calculated for NCAA prospects.
 </p>
 <p>
 The values in the "HUM" column should be interperted in the same way as the EWP column.
@@ -28,12 +34,18 @@ The values in the "HUM" column should be interperted in the same way as the EWP 
 
 
 <p>
-<b>CMB:</b> CMB is simply a combination of each player's EWP and HUM scores converted to their percentile rnaking among all historical prospects.
+<b>CMB:</b> 
+</p>
+<p>
+CMB is simply a combination of each player's EWP and HUM scores converted to their percentile rnaking among all historical prospects.
 </p>
 
 
 <p>
-<b>BUST, BNCH, STRT, STUD, STAR:</b> These columns list the outputs of a multinomial regression used to project the likelihood that a player will ultimately reach each tier of NBA performance:
+<b>BUST, BNCH, STRT, STUD, STAR:</b> 
+</p>
+<p>
+These columns list the outputs of a multinomial regression used to project the likelihood that a player will ultimately reach each tier of NBA performance:
 <p>
 `Bust':  Never worth more than 2.5 wins in a season.
 </p>
