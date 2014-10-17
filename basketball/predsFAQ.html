@@ -10,15 +10,15 @@ VJL_bball</a>
 <h1>Projection Model FAQ</h1>
 
 <p>
-This is an FAQ for my draft projection model app that I make available <a href="https://laynevashro.shinyapps.io/preds/">here</a>.
+This is an FAQ for my <a href="https://laynevashro.shinyapps.io/preds/">draft projection model app</a>.
 </p>
 
 <p>
-Use the "dataset" pulldown to toggle between "Draft" and "Euro".  The draft dataset includes retrodictions for all players drafted since 1990, as well as predictions for the 2015 draft class which I will update as the NCAA season progresses.  The euro dataset gives projections for international prospects in each season I have data for.  This includes players who have been drafted as well as many other european prospects from the past and present.
+Use the "dataset" pulldown to toggle between "Draft" and "Euro."  The draft dataset includes retrodictions for all players drafted since 1990, as well as predictions for the 2015 draft class which I will update as the NCAA season progresses.  The euro dataset gives projections for international prospects in each season I have data for.  This includes previously drafted players as well as many other european prospects from the past and present.
 </p>
 
 <p>
-Use the "Seasons" slider to select the range of years you want to include in your browsing, then further filter the list by increasing the minutes threshold.  If you want to sort columns by highest or lowest score, simply click onthe column header of the stat you are interested in.  If you are just looking for a specific player, I recommend the search function onthe right side of the page.
+Use the "Seasons" slider to select the range of years you want to include in your browsing, then further filter the list by increasing the minutes threshold.  If you want to sort columns by highest or lowest score, simply click on the column header of the stat you are interested in.  If you are just looking for a specific player, I recommend the search function on the right side of the page.
 </p>
 
 <p>
@@ -59,19 +59,19 @@ CMB is simply a combination of each player's EWP and HUM scores converted to the
 <p>
 These columns list the outputs of a multinomial regression used to project the likelihood that a player will ultimately reach each tier of NBA performance:
 <p>
-`Bust':  Never worth more than 2.5 wins in a season.
+<i>`Bust'</i>:  Never worth more than 2.5 wins in a season.
 </p>
 <p>
-`Bench warmer':  Peak value between 2.5 and 5 wins.
+<i>`Bench warmer'</i>:  Peak value between 2.5 and 5 wins.
 </p>
 <p>
-`Starter':  Peak value between 5 and 7.5 wins.
+<i>`Starter'</i>:  Peak value between 5 and 7.5 wins.
 </p>
 <p>
-`Stud':  Peak value between 7.5 and 10 wins.
+<i>`Stud'</i>:  Peak value between 7.5 and 10 wins.
 </p>
 <p>
-`Star':  Ultimately worth more than 10 wins in a season.
+<i>`Star'</i>:  Ultimately worth more than 10 wins in a season.
 </p>
 <p>
 This model uses a player's combined CMB score from the previous metrics, but also includes no-step veritcal, and wingspan / height as additional variables.  
