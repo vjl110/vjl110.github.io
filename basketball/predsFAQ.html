@@ -16,7 +16,7 @@ here</a>, and <a href="http://nyloncalculus.com/2014/08/21/projecting-internatio
 here</a>).     
 </p>
 <p>
-The values inthe "EWP" column give the number of "wins" each player is projected to be worth at his peak.  Wins are defined by a combined two-year average of Win Shares and RAPM-wins. 
+The values in the "EWP" column give the number of "wins" each player is projected to be worth at his peak.  Wins are defined by a combined two-year average of Win Shares and RAPM-wins. 
 </p>
 
 <p>
@@ -34,13 +34,22 @@ The values in the "HUM" column should be interperted in the same way as the EWP 
 
 <p>
 <b>BUST, BNCH, STRT, STAR:</b> These columns list the outputs of a multinomial regression used to project the likelihood that a player will ultimately reach each tier of NBA performance:
-
+<p>
 `Bust':  Never worth more than 2.5 wins in a season.
+</p>
+<p>
 `Bench warmer':  Peak value between 2.5 and 5 wins.
+</p>
+<p>
 `Starter':  Peak value between 5 and 7.5 wins.
+</p>
+<p>
 `Stud':  Peak value between 7.5 and 10 wins.
+</p>
+<p>
 `Star':  Ultimately worth more than 10 wins in a season.
-
+</p>
+<p>
 This model uses a player's combined CMB score from the previous metrics, but also includes no-step veritcal, and wingspan / height as additional variables.  
 </p>
 
