@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+Twitter: <a href="https://twitter.com/VJL_bball">
+VJL_bball</a>
+</p>
+
+<h1>Projection Model FAQ</h1>
+
+<p>
+This is an FAQ for my <a href="https://laynevashro.shinyapps.io/comps_nba/">NBA Player-Season Comparison Finder</a>.
+</p>
+
+<p>
+This tool is designed to help identify similar player-seasons based on basic features like height, weight, age, and boxscore statists.  I want to be clear.  Some of the comparisons generated will not be very good.  This tool is designed to aid in the process of brainstorming.  The goal is to help people break free of boring and often deeply flawed comparisons.  In addition, since the data goes back to the early 70s the outputs often call attention to long-forgotten players.  I assume that looking at a young NBA player's best comps helps add something to consideration of his future prospects, but there are certainly better ways to go about that.  I bring this up because I understand this tool will be used in that fashion.  Do so with caution.  
+</p>
+
+<p>
+Select a player, either by scrolling through the pulldown menu or typing his name "First Last" into the selection box.  Once you have selected a player, the "Seasons' box will default to his most recent season.  You can then change it to whichever season you are interested in looking at.
+</p>
+
+
+<p>
+The data includes all NBA player-seasons (at least 250 minutes played) with complete boxscore statistics going back to 1973. All values are standardized using Z-scores. When you select a player and a season, the model pulls that player-season and compares it to all other player-seasons in the data. It calculates the absolute difference between the focal player and all others in each category, then uses the average difference (weighted by the slider values) to give an overall ``similarity score.''
+</p>
+
+<p>
+As an example, if you set ``Points'' to 1, ``Assists'' to 1, and ``Age'' to .5, and set all other measures to 0 the math will look like this
+</p>
+
+<p>
+Similarity between X and Y = ( abs(PTS.x - PTS.y) + abs(AST.x - AST.y) + 0.5*abs(AGE.x - AGE.y) ) / 2.5
+</p>
+
+<p>
+The top-50 comparisons update in real-time, so pick your player and watch the impact of different adjustment.
+</p>
+
+</body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54782375-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  
+</script>
+  
+</html>
