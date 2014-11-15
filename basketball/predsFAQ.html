@@ -14,7 +14,7 @@ This is an FAQ for my <a href="https://laynevashro.shinyapps.io/preds/">draft pr
 </p>
 
 <p>
-Use the "dataset" pulldown to toggle between "Draft" and "Euro."  The draft dataset includes retrodictions for all players drafted since 1990, as well as predictions for the 2015 draft class which I will update as the NCAA season progresses.  The euro dataset gives projections for international prospects in each season I have data for.  This includes previously drafted players as well as many other european prospects from the past and present.
+Use the "dataset" pulldown to toggle between "Draft", "NCAA", and "Euro."  The draft dataset includes retrodictions for all players drafted since 1990, as well as predictions for the 2015 draft class which I will update as the NCAA season progresses.  The NCAA and Euro datasets include additional players and list each season separately.
 </p>
 
 <p>
@@ -25,7 +25,7 @@ Use the "Seasons" slider to select the range of years you want to include in you
 <b>EWP:</b> 
 </p>
 <p>
-"Expected Wins Peak" is a linear regression model used to project how well a player will perform at the peak of his NBA career.  NCAA and international prospects are projected using two similar but distinct models.  The NCAA model uses age, experience, MPG, SOS, Height, Weight, and basic per-possession box-score statistics fit from all players to play in both the NCAA and NBA since 1990.  I have outlined the international model in detail in an article series (<a href="http://nyloncalculus.com/2014/08/13/projecting-international-prospects/">
+"Expected Wins Peak" is a quasipoisson regression model used to project how well a player will perform at the peak of his NBA career.  NCAA and international prospects are projected using two similar but distinct models.  The NCAA model uses age, experience, MPG, SOS, Height, Weight, and basic per-possession box-score statistics fit from all players to play in both the NCAA and NBA since 1990.  I have outlined the international model in detail in an article series (<a href="http://nyloncalculus.com/2014/08/13/projecting-international-prospects/">
 here</a>, <a href="http://nyloncalculus.com/2014/08/15/projecting-international-prospects-part-2/">
 here</a>, and <a href="http://nyloncalculus.com/2014/08/21/projecting-international-prospects-part-3/">
 here</a>).     
@@ -43,15 +43,6 @@ The "Humble" model has the same ultimate goal as the EWP model, project a player
 <p>
 The values in the "HUM" column should be interperted in the same way as the EWP column.
 </p>
-
-
-<p>
-<b>CMB:</b> 
-</p>
-<p>
-CMB is simply a combination of each player's EWP and HUM scores converted to their percentile rnaking among all historical prospects.
-</p>
-
 
 <p>
 <b>BUST, BNCH, STRT, STUD, STAR:</b> 
